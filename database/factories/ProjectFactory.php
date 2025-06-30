@@ -24,6 +24,8 @@ class ProjectFactory extends Factory
             'image_path' => fake()->imageUrl(),
             'created_by' => 1, // Assuming user with ID 1 exists
             'updated_by' => 1, // Assuming user with ID 1 exists
+            'created_at' => time(),
+            'updated_at' => time()
         ];
     }
 }

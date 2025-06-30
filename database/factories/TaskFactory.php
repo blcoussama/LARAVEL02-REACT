@@ -26,6 +26,8 @@ class TaskFactory extends Factory
             'assigned_user_id' => 1, // Assuming user with ID 1 exists
             'created_by' => 1, // Assuming user with ID 1 exists
             'updated_by' => 1, // Assuming user with ID 1 exists
+            'created_at' => time(),
+            'updated_at' => time()
         ];
     }
 }
