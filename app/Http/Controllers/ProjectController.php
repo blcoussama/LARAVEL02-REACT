@@ -30,7 +30,9 @@ class ProjectController extends Controller
             $query->where("status", request("status"));
         }
 
-        $projects = $query->orderBy($sortField, $sortDirection)
+        // ADD THIS LINE - eager load the relationships:
+        $projects = $query->with(['createdBy', 'updatedBy'])
+            ->orderBy($sortField, $sortDirection)
             ->paginate(10)
             ->onEachSide(1);
 
